@@ -2,6 +2,15 @@
 
 An Event Manager, Plugin System, Middleware Manager, Extendability System, Plugin API for Go apps. Have you ever imagined if your Go app has WordPress extendability features? The goal is to make the powerful & simple plugin API of WordPress available in Go!
 
+
+## Installation
+
+> Go 1.18+ is required.
+
+```bash
+go get github.com/Golang-Hooks/Golang-Hooks@v1.0.1
+```
+
 ## Examples
 
 > The test file `hooks_test.go` covers a wide range of examples.
@@ -9,6 +18,12 @@ An Event Manager, Plugin System, Middleware Manager, Extendability System, Plugi
 ### Actions Example
 
 ```go
+package main
+
+import (
+	"github.com/Golang-Hooks/Golang-Hooks"
+)
+
 func main() {
 	h := hooks.CreateHooks()
 
@@ -36,6 +51,14 @@ func main() {
 ### Filters Example
 
 ```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/Golang-Hooks/Golang-Hooks"
+)
+
 func main() {
 	h := hooks.CreateHooks()
 
